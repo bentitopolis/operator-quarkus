@@ -1,3 +1,5 @@
+Working from https://www.instana.com/blog/writing-a-kubernetes-operator-in-java-part-3/ as a starting point.
+
 ## Notes for deploying the simple base operator-quarkus on CodeReadyContainers (CRC) [CRC v1.10.0/OpenShift 4.4.3]
 
 The `jib` extension has been added to this project to allow for building the image and pushing. You can avoid having to push/pull to a remote registry if you are running CRC locally since it includes a built-in registry.
