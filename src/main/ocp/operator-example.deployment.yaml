@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: operator-example
+  name: operator-quarkus
 spec:
   selector:
     matchLabels:
-      app: operator-example
+      app: operator-quarkus
   replicas: 1
   template:
     metadata:
       labels:
-        app: operator-example
+        app: operator-quarkus
     spec:
-      serviceAccountName: operator-example
+      serviceAccountName: operator-quarkus
       containers:
-        - image: image-registry.openshift-image-registry.svc:5000/default/operator-example:1.0-SNAPSHOT
-          name: operator-example
+        - image: image-registry.openshift-image-registry.svc:5000/default/operator-quarkus:1.0-SNAPSHOT
+          name: operator-quarkus
           imagePullPolicy: IfNotPresent

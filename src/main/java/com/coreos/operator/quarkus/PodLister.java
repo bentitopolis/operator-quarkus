@@ -1,4 +1,4 @@
-package com.coreos.operator.example;
+package com.coreos.operator.quarkus;
 
 
 import io.fabric8.kubernetes.api.model.Pod;
