@@ -1,0 +1,7 @@
+To Do:
++ make rest of deploy and CR yaml;
++ figure out why docker push mounted: default/operator-example;
++ confirm Makefile and deploy works
++ deploy to CRC
+- understand the example better how and why it's working
+- fix the WARN level errors that fill the quarkus operator log currently

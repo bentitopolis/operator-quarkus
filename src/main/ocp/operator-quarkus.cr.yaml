@@ -1,0 +1,9 @@
+apiVersion: coreos.com/v1
+kind: Example
+metadata:
+  name: example
+spec:
+  specialRoles:
+    - A
+    - B
+    - C

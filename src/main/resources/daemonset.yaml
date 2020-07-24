@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  generateName: example-
+  namespace: default
+  ownerReferences:
+    - apiVersion: apps/v1
+      kind: Example
+      name: placeholder
+      uid: placeholder
+spec:
+  selector:
+    matchLabels:
+      app: kuard
+  template:
+    metadata:
+      labels:
+        app: kuard
+    spec:
+      containers:
+        - image: gcr.io/kuar-demo/kuard-amd64:blue
+          imagePullPolicy: IfNotPresent
+          name: kuard

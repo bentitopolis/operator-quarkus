@@ -21,9 +21,10 @@ Setup and install for OpenShift can be somewhat automated by calling:
 export DEPLOY_NAMESPACE=default
 make apply
 make deploy
+make apply-cr
 ```
 
-If all goes well you'll have a deployment with a pod up that ran the Quarkus operator on startup and listed all the pods running in `default` project. The log for the `operator-quarkus.*` pod in the `operator-quarkus` deployment in the `default` project should list at least itself for running pods.
+If all goes well you will have a deployment that creates an example daemonset and example pod in the default namespace.
 
 # operator-quarkus project
 
