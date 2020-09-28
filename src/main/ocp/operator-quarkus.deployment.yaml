@@ -14,6 +14,6 @@ spec:
     spec:
       serviceAccountName: operator-quarkus
       containers:
-        - image: image-registry.openshift-image-registry.svc:5000/default/operator-quarkus:1.0-SNAPSHOT
+        - image: $INTERNAL_IMAGE_REPO/$DUMMY_DEPLOY_NAMESPACE/operator-quarkus:1.0-SNAPSHOT
           name: operator-quarkus
           imagePullPolicy: IfNotPresent
