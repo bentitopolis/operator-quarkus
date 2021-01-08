@@ -8,6 +8,8 @@ DEPLOY_NAMESPACE ?= default
 EXTERNAL_IMAGE_REPO ?= default-route-openshift-image-registry.apps-crc.testing
 INTERNAL_IMAGE_REPO ?= image-registry.openshift-image-registry.svc:5000
 
+.EXPORT_ALL_VARIABLES:
+
 build:
 	@echo "${green}Building with mvnw${reset}"
 	./mvnw clean package -Pnative -Dquarkus.native.container-build=true -Dnative-image.xmx=5g -Dquarkus.container-image.build=true -Dquarkus.container-image.registry=${EXTERNAL_IMAGE_REPO} -Dquarkus.container-image.group=default
